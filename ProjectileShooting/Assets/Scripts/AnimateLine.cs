@@ -11,6 +11,11 @@ public class AnimateLine : MonoBehaviour
     private string textureName = "_MainTex";
     private Vector2 uvOffset = Vector2.zero;
 
+    private void Start()
+    {
+        uvOffset = new Vector2(0, 0);
+    }
+
     void LateUpdate()
     {
         uvOffset += (Time.deltaTime * uvAnimationRate);
